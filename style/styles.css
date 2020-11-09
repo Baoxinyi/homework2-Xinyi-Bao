@@ -1,0 +1,337 @@
+body {
+    display: grid;
+    grid-gap: 10px;
+    margin: 5px;
+    background-color: rgb(15, 8, 80);
+    font-size: 24px; 
+    font-family: 'Indie Flower', cursive; 
+    text-align: center;
+    color: white;
+    grid-template-areas:
+      "header"
+      "intro"
+      "body"
+      "footer"
+}
+
+h1 {
+    font-size: 30px;
+    font-style: oblique;
+    color: rgb(185, 250, 54);
+}
+
+h2 {
+    color:whitesmoke;
+    font-size: 30px;
+}
+
+p {
+    color: rgb(243, 233, 240);
+}
+
+h3 {
+    color: rgb(19, 80, 80);
+    text-align: inherit;
+    font-size: 27px;
+}
+
+header {
+    grid-area: header;
+    background-image: url('https://uil.unesco.org/sites/default/files/styles/img_688x358/public/2._grand_canal.jpg?itok=Qctyx6Pb');
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-gap: 8px;
+    grid-template-areas:
+        "topic topic topic"
+        "one one one"
+        "other other other"
+}
+
+.topic {
+    grid-area: topic topic topic;
+    background-color: hsla(50, 33%, 25%, 0.75);
+}
+
+.topic:hover {
+    animation-name: box-anim1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    background-color: rgb(28, 197, 160);
+}
+
+@keyframes box-anim1{
+    0% {
+        transform: scale(1) translate(0px, 0px);
+    }
+
+    50% {
+        background-color: rgb(84, 150, 146);
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1) ;
+    }
+}
+
+.one {
+    grid-area: one one one;
+}
+
+.one:hover {
+    animation-name: box-anim2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    background-color: transparent;
+}
+
+@keyframes box-anim2{
+    0% {
+        transform: scale(1) translate(0px, 0px);
+    }
+
+    50% {
+        background-color: rgb(6, 52, 88);
+        transform: scale(2) rotate3d(0, 1, 0.5, 3.142rad);
+    }
+    100% {
+        transform: scale(1) ;
+    }
+}
+
+
+.other {
+    grid-area: other other other;
+    background-color: hsla(48, 14%, 85%, 0.75);
+}
+
+.other:hover {
+    animation-name: box-anim3;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    background-color: thistle;
+}
+
+@keyframes box-anim3{
+    0% {
+        transform: scale(1) ;
+    }
+
+    50% {
+        background-color: yellowgreen;
+        transform: scale(2) translate(-30px, 0px);
+    }
+    100% {
+        transform: scale(1) ;
+    }
+}
+
+
+.intro {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro1"
+      "sentence"
+}
+
+.intro .intro1 {
+    grid-area: intro1;
+    padding: 3px;
+}
+
+
+.intro .sentence {
+    grid-area: sentence;
+    background: rgb(200, 224, 151);
+    padding: 3px;
+}
+
+
+main {
+    background-color: rgb(57, 92, 81);
+    grid-area: body;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 3fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+        "intro1"
+        "ad ad ad"
+        "para" 
+        "sidebar"
+}
+
+main .intro1 {
+    grid-area: intro1;
+    background: rgb(228, 143, 110);
+    color: black;
+    padding: 3px;
+}
+
+main .mobile-ad {
+    grid-area: ad ad ad;
+}
+
+main .para {
+    background: rgb(3, 53, 40);
+    grid-area: para;
+    padding: 8px;
+}
+
+footer {
+    background-image: url('https://www.hostjia.com/wp-content/uploads/2019/08/839edaaf4607304d47ae74ce05591d33-750x432.jpg');
+    color: rgb(16, 4, 37);
+    font-size: 40px;
+    padding: 15px;
+    grid-area: footer;
+}
+
+
+.desktop-ad {
+    grid-area: ad ad ad;
+    display: none;
+    height: 100%;
+}
+
+.intro .intro1 {
+    display: none;
+}
+
+
+.sidebar {
+    background: rgb(241, 240, 169);
+    padding: 10px;
+    grid-area: sidebar;
+    display: none;
+}
+
+.sidebar .intro2 {
+    background: rgb(255, 208, 136);
+    height: 100%;
+}
+
+
+.mobile-ad img {
+    width: 100%;
+}
+
+.desktop-ad img {
+    width: 350px;
+}
+
+
+@media (max-width: 576px) {
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    body {
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "header"
+            "intro"
+            "body"
+            "sidebar"
+            "footer"
+    }
+
+    .intro {
+        grid-template-areas:
+          "sentence"
+    }
+
+    main {
+        grid-template-areas:
+            "intro1 ad"
+            "para para";
+    }
+
+    .sidebar {
+        display: grid;
+    }
+
+    .mobile-ad img {
+        display: none;
+    }
+
+}
+
+
+
+@media (min-width: 576px) {
+    header {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    body {
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-areas:
+            "header"
+            "intro"
+            "body"
+            "sidebar"
+            "footer"
+    }
+
+    .intro {
+        grid-template-areas:
+          "intro1"
+          "sentence"
+    }
+
+    .intro .intro1 {
+        display: block;
+    }
+
+    main {
+        grid-template-columns: 2.5fr 1fr;
+        grid-template-areas:
+            "intro1 ad"
+            "para para";
+    }
+
+    .sidebar {
+        display: grid;
+    }
+
+    .mobile-ad img {
+        width: 200px;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "one ad"
+            "body sidebar"
+            "footer footer"
+    }
+
+    .intro {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "intro1 sentence"
+    }
+
+
+    main {
+        grid-template-columns: 1fr 2.5fr;
+        grid-template-areas:
+            "intro1 para"
+    }
+
+    .mobile-ad {
+        display: none;
+    }
+
+    .desktop-ad {
+        display: block;
+    }
+}
