@@ -43,13 +43,13 @@ header {
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-gap: 8px;
     grid-template-areas:
-        "topic topic topic"
-        "one one one"
-        "other other other"
+        "topic"
+        "one"
+        "other"
 }
 
 .topic {
-    grid-area: topic topic topic;
+    grid-area: topic;
     background-color: hsla(50, 33%, 25%, 0.75);
 }
 
@@ -75,7 +75,7 @@ header {
 }
 
 .one {
-    grid-area: one one one;
+    grid-area: one;
 }
 
 .one:hover {
@@ -101,7 +101,7 @@ header {
 
 
 .other {
-    grid-area: other other other;
+    grid-area: other;
     background-color: hsla(48, 14%, 85%, 0.75);
 }
 
@@ -158,7 +158,7 @@ main {
     grid-gap: 5px;
     grid-template-areas: 
         "intro1"
-        "ad ad ad"
+        "ad"
         "para" 
         "sidebar"
 }
@@ -171,7 +171,7 @@ main .intro1 {
 }
 
 main .mobile-ad {
-    grid-area: ad ad ad;
+    grid-area: ad;
 }
 
 main .para {
@@ -190,7 +190,7 @@ footer {
 
 
 .desktop-ad {
-    grid-area: ad ad ad;
+    grid-area: ad;
     display: none;
     height: 100%;
 }
