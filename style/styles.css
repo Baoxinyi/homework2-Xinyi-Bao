@@ -43,9 +43,7 @@ header {
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 8px;
     grid-template-areas:
-        "topic topic topic"
-        "one one one"
-        "other other other"
+        "topic one other"
 }
 
 .topic {
