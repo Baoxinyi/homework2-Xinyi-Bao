@@ -49,6 +49,7 @@ header {
 .topic {
     grid-area: topic;
     background-color: hsla(50, 33%, 25%, 0.75);
+
 }
 
 .topic:hover {
@@ -74,7 +75,6 @@ header {
 
 .one {
     grid-area: one;
-
 }
 
 .one:hover {
@@ -157,7 +157,7 @@ main {
     grid-gap: 5px;
     grid-template-areas: 
         "intro1"
-        "ad"
+        "ad ad ad"
         "para" 
         "sidebar"
 }
@@ -170,7 +170,7 @@ main .intro1 {
 }
 
 main .mobile-ad {
-    grid-area: ad;
+    grid-area: ad ad ad;
 }
 
 main .para {
@@ -189,7 +189,7 @@ footer {
 
 
 .desktop-ad {
-    grid-area: ad;
+    grid-area: ad ad ad;
     display: none;
     height: 100%;
 }
@@ -257,7 +257,6 @@ footer {
 
 
 @media (min-width: 576px) {
- 
 
     body {
         grid-template-rows: auto auto 1fr auto auto;
