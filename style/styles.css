@@ -40,7 +40,7 @@ header {
     background-image: url('https://uil.unesco.org/sites/default/files/styles/img_688x358/public/2._grand_canal.jpg?itok=Qctyx6Pb');
     padding: 10px;
     display: grid;
-    grid-template-colomns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-gap: 8px;
     grid-template-areas:
         "topic"
