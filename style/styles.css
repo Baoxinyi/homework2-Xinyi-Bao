@@ -189,7 +189,7 @@ footer {
 
 
 .desktop-ad {
-    grid-area: ad ad ad;
+    grid-area: ad;
     display: none;
     height: 100%;
 }
