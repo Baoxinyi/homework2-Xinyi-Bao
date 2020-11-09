@@ -48,7 +48,7 @@ header {
         "other"
 }
 
-.topic {
+header .topic {
     grid-area: topic;
     background-color: hsla(50, 33%, 25%, 0.75);
 }
@@ -74,10 +74,8 @@ header {
     }
 }
 
-.one {
+header .one {
     grid-area: one;
-    grid-column-start: 2;
-    grid-column-end: 4;
 
 }
 
@@ -103,10 +101,8 @@ header {
 }
 
 
-.other {
+header .other {
     grid-area: other;
-    grid-column-start: 4;
-    grid-column-end: 5;
     background-color: hsla(48, 14%, 85%, 0.75);
 }
 
@@ -267,7 +263,7 @@ footer {
 
 @media (min-width: 576px) {
     header {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
     }
 
     body {
