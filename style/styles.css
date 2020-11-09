@@ -40,7 +40,7 @@ header {
     background-image: url('https://uil.unesco.org/sites/default/files/styles/img_688x358/public/2._grand_canal.jpg?itok=Qctyx6Pb');
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-gap: 8px;
     grid-template-areas:
         "topic"
@@ -48,7 +48,7 @@ header {
         "other"
 }
 
-header .topic {
+.topic {
     grid-area: topic;
     background-color: hsla(50, 33%, 25%, 0.75);
 }
@@ -74,7 +74,7 @@ header .topic {
     }
 }
 
-header .one {
+.one {
     grid-area: one;
 
 }
@@ -101,7 +101,7 @@ header .one {
 }
 
 
-header .other {
+.other {
     grid-area: other;
     background-color: hsla(48, 14%, 85%, 0.75);
 }
@@ -225,7 +225,7 @@ footer {
 
 @media (max-width: 576px) {
     header {
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
     }
 
     body {
@@ -263,7 +263,7 @@ footer {
 
 @media (min-width: 576px) {
     header {
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
     }
 
     body {
