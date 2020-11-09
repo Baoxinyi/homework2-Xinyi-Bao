@@ -157,7 +157,7 @@ main {
     grid-gap: 5px;
     grid-template-areas: 
         "intro1"
-        "ad ad ad"
+        "ad"
         "para" 
         "sidebar"
 }
@@ -169,6 +169,9 @@ main .intro1 {
     padding: 3px;
 }
 
+main .mobile-ad {
+    grid-area: ad;
+}
 
 main .para {
     background: rgb(3, 53, 40);
@@ -186,7 +189,7 @@ footer {
 
 
 .desktop-ad {
-    grid-area: ad;
+    grid-area: ad ad ad;
     display: none;
     height: 100%;
 }
