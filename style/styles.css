@@ -76,6 +76,9 @@ header {
 
 .one {
     grid-area: one;
+    grid-column-start: 2;
+    grid-column-end: 4;
+
 }
 
 .one:hover {
@@ -102,6 +105,8 @@ header {
 
 .other {
     grid-area: other;
+    grid-column-start: 4;
+    grid-column-end: 5;
     background-color: hsla(48, 14%, 85%, 0.75);
 }
 
