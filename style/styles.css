@@ -10,7 +10,7 @@ body {
     grid-template-areas:
       "header"
       "intro"
-      "body"
+      "main"
       "footer"
 }
 
@@ -150,7 +150,7 @@ header {
 
 main {
     background-color: rgb(57, 92, 81);
-    grid-area: body;
+    grid-area: main;
     display: grid;
     padding: 10px;
     grid-template-columns: 3fr;
@@ -228,7 +228,7 @@ footer {
         grid-template-areas:
             "header"
             "intro"
-            "body"
+            "main"
             "sidebar"
             "footer"
     }
@@ -263,7 +263,7 @@ footer {
         grid-template-areas:
             "header"
             "intro"
-            "body"
+            "main"
             "sidebar"
             "footer"
     }
