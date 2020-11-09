@@ -10,7 +10,7 @@ body {
     grid-template-areas:
       "header"
       "intro"
-      "main"
+      "body"
       "footer"
 }
 
@@ -150,7 +150,7 @@ header {
 
 main {
     background-color: rgb(57, 92, 81);
-    grid-area: main;
+    grid-area: body;
     display: grid;
     padding: 10px;
     grid-template-columns: 3fr;
@@ -228,7 +228,7 @@ footer {
         grid-template-areas:
             "header"
             "intro"
-            "main"
+            "body"
             "sidebar"
             "footer"
     }
@@ -241,7 +241,7 @@ footer {
     main {
         grid-template-areas:
             "intro1 ad"
-            "para";
+            "para para";
     }
 
     .sidebar {
@@ -263,7 +263,7 @@ footer {
         grid-template-areas:
             "header"
             "intro"
-            "main"
+            "body"
             "sidebar"
             "footer"
     }
@@ -282,7 +282,7 @@ footer {
         grid-template-columns: 2.5fr 1fr;
         grid-template-areas:
             "intro1 ad"
-            "para";
+            "para para";
     }
 
     .sidebar {
