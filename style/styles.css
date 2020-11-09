@@ -43,13 +43,13 @@ header {
     grid-template-colomns: 1fr 2fr 1fr;
     grid-gap: 8px;
     grid-template-areas:
-        "topic"
-        "one"
-        "other"
+        "topic topic topic "
+        "one one one"
+        "other other other"
 }
 
 .topic {
-    grid-area: topic;
+    grid-area: topic topic topic;
     background-color: hsla(50, 33%, 25%, 0.75);
 }
 
@@ -75,7 +75,7 @@ header {
 }
 
 .one {
-    grid-area: one;
+    grid-area: one one one;
 
 }
 
@@ -102,7 +102,7 @@ header {
 
 
 .other {
-    grid-area: other;
+    grid-area: other other other;
     background-color: hsla(48, 14%, 85%, 0.75);
 }
 
